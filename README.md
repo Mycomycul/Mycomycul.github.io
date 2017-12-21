@@ -1,2 +1,2 @@
 # Mycomycul.github.io
-Mycomycul Profile Page
+Mycomycul Portfolio Page

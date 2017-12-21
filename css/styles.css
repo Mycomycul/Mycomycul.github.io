@@ -1,0 +1,96 @@
+body{
+    margin:0;
+}
+
+.wrap{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+
+.menu-container {
+max-height: 140;
+margin: 0% auto;
+width: 100%;
+position: absolute;
+z-index: 100;
+background: rgba(0, 4, 20, 0);
+}
+.menu {
+	text-align: center;
+	display: inline;
+	margin: 0;
+	list-style: none;
+}
+
+.menu li{
+    color: #0000ee;
+    display:inline-block;
+    padding: 15px 30px;
+    position:relative;
+    border: 1px solid gray;
+    box-shadow: inset -2px -2px 2px #888888
+}
+.menu li:hover {
+    color: #000;
+}
+
+.menu li:hover .drop-down{
+    display: block;
+    opacity:1;
+    visibility: visible
+}
+
+
+.drop-down{
+    padding: 0;
+	left: 0;
+	position: absolute;
+	top: 50px;
+	width: 100%;
+	opacity: 0;
+	/* While not being hovered, drop down-menu hides 
+	   This also avoids a block-level bug */
+	visibility: hidden;
+}
+.drop-down li{
+    background: #ffffff;
+    color:#0000ee;
+}
+.drop-down li:hover{
+    color:#000;
+}
+
+
+/*Grid Blueprints*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+}
+
+#home{
+    background: url(../images/Head.jpg) no-repeat 50% 50%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    background-attachment: fixed;
+    background-size: cover;
+}
