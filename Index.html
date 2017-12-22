@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!--Add Navbar Brand-->
+    <!--Add Navbar Brand Image
+    Change max- size of page content
+    Fix Jumbotron Text-->
     <head>
         <title>Michael Strunk</title>
         <meta charset="utf-8">
@@ -19,23 +21,28 @@
         <link rel="stylesheet" href="./css/styles.css">
     
     </head>
-    <body>
+    <body >
         <!--PAGE CONTENT-->
-        <div class="container">
+        <div class="container ">
+        <div class="container-fluid p-0" id="the-page">
+            
             <!--NAVIGATION-->
 
-            <nav class="navbar navbar-expand-sm fixed-top navbar-light" style="background:transparent;">
-                <a class="visible-lg navbar-brand " href="#">Michael Strunk</a>
+            <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" >
+                <div class="container">
+                    <a class="visible-lg navbar-brand " href="#" style="line-height:1; margin-top:-10px;">Michael Strunk<br>
+                    <div class="sub-head">Software Developer</div></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <div class="collapse navbar-collapse justify-content-right" id="navbarNav">
+                <ul class="navbar-nav ">
                     <li class="nav-item active">
                     <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                     </li>
+                    
                     <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
+                    <a class="nav-link" href="#about">Skills</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="#portfolio">Portfolio</a>
@@ -45,25 +52,54 @@
                     </li>
                 </ul>
                 </div>
+                </div>
             </nav>
+        
 
             <!--END NAVIGATION-->
-
-            <!--TOP PANEL-->
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>            
-            
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>    
-            
             <!--HOME -->
-
-            <!-- END TOP PANEL-->
             
+            <div class="jumbotron-fluid" id="jumbotron-one" >
+                    
+                <div class="container-fluid">
+                            
+                    <h1 class="display-3"></h1>
+                    <p class="lead"></p>
+                </div>
+            </div>
+            <div class="jumbotron-fluid"  >
+                    
+                <div class="container" id="skills" >
+                            
+                    <h1 class="display-3">SKILLS</h1>
+                    <p class="lead"></p>
+                </div>
+            </div>
+            <div>
+            
+            <div class="container" id="about">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <img src="./image/me.jpg" class="img-fluid" alt="Profile Image" id="about-image">
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <p>About</p>
+                        <p>All About</p>
+                    </div>
+                </div>
+            </div>
+                
+           
+            
+ 
+            
+
+            <!-- END HOME-->
+        <div class="container">  
             <!--FOOTER -->
 
-            <div class="container">
-                <div class="row text-center">
+            <div class="container ">
+                <div class="row text-center foot">
                 <div class=" col-sm-12 col-md-6 col-lg-4">
                     <a href="#home">Return to Top</a>
                 </div>
@@ -71,7 +107,7 @@
                     Mycomycul.github.io
                 </div>
                 <div class=" col-sm-12 col-md-12 col-lg-4">
-                    &copy Michael Strunk  &nbsp|&nbsp  2017
+                    &copy; Michael Strunk  &nbsp;|&nbsp;  2017
                 </div>
                 </div>
             </div>
@@ -81,7 +117,8 @@
     
         </div>
         <!--END PAGE CONTENT-->
-
+        </div>
+        </div>
         <!--JAVASCRIPT Inclusions-->
         <script src="./js/jquery-3.2.1.slim.js"></script>
         <script src="./js/popper.js"></script>
