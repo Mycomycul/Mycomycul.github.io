@@ -6,7 +6,7 @@ body{
 #the-page{
 border-radius:10px;
 border: 2px orange;
-box-shadow: 0 5px 15px rgb(255, 94, 0);
+box-shadow: 2px 2px 4px rgb(255, 251, 0), -2px -2px 4px rgb(255, 251, 0);;
 overflow: hidden;
 }
 
@@ -43,7 +43,7 @@ overflow: hidden;
 .foot{
     color: #aaaaaa;
 }
-#skills{
+.info-box{
     height:600px;
     background-color: black;
 }
