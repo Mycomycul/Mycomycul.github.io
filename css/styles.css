@@ -15,7 +15,7 @@ overflow: hidden;
 }
 
 #jumbotron-one{
-    background: url("../image/thetop.jpg");
+    background: url("../images/thetop.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@ overflow: hidden;
     margin-top:50px;
 }
 
-#about-image{
+.about-image{
     margin: 50px 0 50px 0;
     border: 0px;
     border-radius: 15px;
@@ -46,4 +46,8 @@ overflow: hidden;
 .info-box{
     height:600px;
     background-color: black;
+}
+.link-icon{
+    width:20%;
+    margin:10%;
 }
