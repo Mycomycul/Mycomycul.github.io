@@ -1,6 +1,7 @@
 body{
     
     background: rgb(21, 22, 22);
+    color: #cccccc;
    
 }
 #the-page{
@@ -8,6 +9,7 @@ border-radius:10px;
 border: 2px orange;
 box-shadow: 2px 2px 4px rgb(255, 251, 0), -2px -2px 4px rgb(255, 251, 0);;
 overflow: hidden;
+background-color: #343a40;
 }
 
 .sub-head{
@@ -23,30 +25,42 @@ overflow: hidden;
     width: 100%;
     min-height: 400px;
     margin-top: -20px;
+}
+/*common styling for all text boxes*/
+.info-box{
+    height: auto;
+    min-height: 200px;
+    margin: 0px 10px 20px 0px;
+}
+.skill-box{
+border-radius:10px;
+border: 4px black;
+box-shadow:  2px 2px 4px rgb(0, 0, 0);;
+margin:10px 20px 10px 20px;
+
+
+}
+
+#about{
+    font-size: 16px;
+    align-content: center;
+    text-align: center;
     
 
 }
-#about{
-    font-size: 16px;
-    color: #FFF;
-    align-content: center;
-    text-align: center;
-    margin-top:50px;
-}
 
 .about-image{
-    margin: 50px 0 50px 0;
+    margin: 10% 0 25px 0;
     border: 0px;
     border-radius: 15px;
     width: 60%;
 }
 .foot{
     color: #aaaaaa;
+    margin: 10px 0 10px 0;
+   
 }
-.info-box{
-    height:600px;
-    background-color: black;
-}
+
 .link-icon{
     width:20%;
     margin:10%;
