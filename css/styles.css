@@ -13,16 +13,7 @@ border-radius:10px;
 border: 2px orange;
 box-shadow: 2px 2px 4px rgb(255, 251, 0), -2px -2px 4px rgb(255, 251, 0);;
 overflow: hidden;
-<<<<<<< HEAD
-background: url("../images/thetop.jpg");
-background-size: cover;
-background-attachment: fixed;
-background-repeat: no-repeat;
-background-position: center center;
-
-=======
 background-color: #242629;
->>>>>>> revert
 }
 
 .sub-head{
@@ -30,7 +21,7 @@ background-color: #242629;
 }
 
 #jumbotron-one{
-    background: rgba(0, 0, 0,0);
+    background: url("../images/thetop.jpg");
     background-size: auto 100%;
     -webkit-background-size: cover;
     background-attachment: fixed;
@@ -77,13 +68,8 @@ margin:10px 20px 10px 20px;
 }
 .foot{
     color: #aaaaaa;
-<<<<<<< HEAD
-    margin: 0px 0 0px 0;
-   min-height:40px;
-=======
     min-height: 40px;
    
->>>>>>> revert
 }
 
 .link-icon{
