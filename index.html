@@ -80,22 +80,37 @@
                             
                 <h1 class="display-3">SKILLS</h1>
                      <div class="row" style="text-align: center;">
-                        <div class="col-sm skill-box">
+                        <div class="col-sm skill-box pop" data-toggle="popover" data-placement="bottom" trigger="hover" data-content="See below for code examples">
                             <h4>Web Development</h4>
-                            <p>Bootstrap <br>
+                            
+                            <p>HTML, CSS, JS <br>
+                                JQuery <br>
+                                Bootstrap <br>
                             </p>
                         </div>
                         <div class="col-sm skill-box">
                             <h4>Software Development</h4>
-                            <p>
+                            <p> C#
                             </p>
                             
                         </div>
                         <div class="col-sm skill-box">
-                            <h4>Interpersonal</h4>
+                            <h4>Employee Skills</h4>
+                            <p>Leadership <br>
+                                Teamwork<br>
+                            Conflict Resolution <br>
+                            Technical Literacy <br>
+                            Strong Work Ethics</p>
                         </div>
                         <div class="col-sm skill-box">
                             <h4>Lab Tech</h4>
+                            <p>Experimental Design <br>
+                                Environmental Monitoring<br>
+                                Lab Management <br>
+                                Tissue Culturing <br>
+                            
+                            
+                        </p>
                         </div>
                     </div>
             </div>
@@ -114,10 +129,16 @@
                 <div class="row" style="text-align: center;">
                         <div class="col-sm col-md-6 col-lg-3" style="margin-top:20px">
                            <!-- Swap in when github is ready for viewing 
-                               <a href="http://github.com/mycomycul/" ><img src="./images/icons/GitHub_Logo.png" style="max-width:200px;"></a> -->
-                               <button type="button" class="btn btn-secondary popover-dismiss" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Check back soon for Michael's Software Portfolio">
-                                <img src="./images/icons/GitHub_Logo.png" style="max-width:200px; ">
-                               </button>
+                               <img src="./images/icons/GitHub_Logo.png" style="max-width:200px;"></a> -->
+                               <a href="https://www.github.com/mycomycul">
+                               <button type="button" class="btn btn-secondary mb-3">
+                                <img src="./images/icons/GitHub_Logo.png" style="max-width:200px;">
+                               </button></a>
+                               <!-- Add when codepen is ready
+                               <a href="https://codepen.io/mycomycul"></a> -->
+                                <button type="button"  class="btn btn-secondary popover-dismiss mt-3 mb-3" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Check back soon for Michael's CODEPEN Portfolio">
+                                 <img src="./images/icons/codepen_logo.png" style="max-width:200px;">
+                                </button>
                         </div>
                         <div class="col-sm col-md-6 col-lg-9">
                             <!--Bootstrap Project Image Carousel-->
@@ -189,8 +210,8 @@
                                 <div class="col-sm-12">
                                     <br>
                                     <h3>About</h3>
-                                    <p>&#9;After 2 bachelors degrees in biology, countless hours in a mycology lab and 9 years working at
-                                    Olympic National Park as a ranger, Michael decided to change pace and pursue his passion for programming.
+                                    <p>&#9;After two bachelors degrees in biology, countless hours in a mycology lab and 9 years working in the
+                                     National Park Service as a ranger, Michael decided to change pace and pursue his passion for programming.
                                     He's an avid microcontroller hobbiest and software developer.</p>
                                 </div>
                                 <div class="col-sm-12">
@@ -249,13 +270,14 @@
             $('.popover-dismiss').popover({
                 trigger: 'focus'
             })
+            $(".pop").popover({trigger:"hover"});
         </script>
 
 
         <!--REMOTE JAVASCRIPT for Bootstrap if Needed--> 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>  -->
         
     </body>
     
