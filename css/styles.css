@@ -20,18 +20,23 @@ background-color: #242629;
     font-size: .8rem;
 }
 
-#jumbotron-one{
+.jumbotron-one{
     background: url("../images/thetop.jpg");
-    background-size: auto 100%;
+    background-size: 100% 100%;
+    
     -webkit-background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     width: 100%;
     min-height: 400px;
-    margin-top: -20px;
+    margin-top: -20px; 
+    object-fit:contain;
     
 }
+
+
+
 /*common styling for all text boxes*/
 .info-box{
     height: auto;
@@ -43,11 +48,10 @@ background-color: #242629;
 border-radius:10px;
 border: 4px black;
 box-shadow:  2px 2px 4px rgb(0, 0, 0);;
-margin:10px 20px 10px 20px;
+/* margin:10px 20px 10px 20px; */
 
 
 }
-
 .carousel{
     margin: 20px 10px 20px 20px;
 }
