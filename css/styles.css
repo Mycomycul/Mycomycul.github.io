@@ -35,7 +35,26 @@ background-color: #242629;
     
 }
 
-
+@media only screen and (max-width: 1020px){
+    .jumbotron-one{
+        background-attachment:scroll;      
+        /* height:100%; */
+        /* width:auto;  */
+        background-size: 100% 100%;
+    }
+    }
+    @media only screen and (max-width: 1020px){
+        .jumbotron-two{
+            background: url("../images/themiddle.jpg");
+            background-size: 100% 100%;
+        }
+        }
+        @media only screen and (max-width: 1020px){
+            .jumbotron-three{
+                background: url("../images/thebottom.jpg");
+                background-size: 100% 100%;
+            }
+            }
 
 /*common styling for all text boxes*/
 .info-box{
