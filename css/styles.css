@@ -41,20 +41,26 @@ background-color: #242629;
         /* height:100%; */
         /* width:auto;  */
         background-size: 100% 100%;
+        min-height: 400px;
     }
+}
+@media only screen and (max-width: 992px){
+    .jumbotron-two{
+        background: url("../images/themiddle.jpg");
+        background-size: 100% 100%;
     }
-    @media only screen and (max-width: 992px){
-        .jumbotron-two{
-            background: url("../images/themiddle.jpg");
-            background-size: 100% 100%;
-        }
-        }
-        @media only screen and (max-width: 992px){
-            .jumbotron-three{
-                background: url("../images/thebottom.jpg");
-                background-size: 100% 100%;
-            }
-            }
+}
+@media only screen and (max-width: 992px){
+    .jumbotron-three{
+        background: url("../images/thebottom.jpg");
+        background-size: 100% 100%;
+    }
+}
+@media only screen and (max-width: 768px){
+    .jumbotron-one{
+        min-height: 300px;
+    }
+}
 
 /*common styling for all text boxes*/
 .info-box{
