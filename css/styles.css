@@ -35,7 +35,7 @@ background-color: #242629;
     
 }
 
-@media only screen and (max-width: 1020px){
+@media only screen and (max-width: 992px){
     .jumbotron-one{
         background-attachment:scroll;      
         /* height:100%; */
@@ -43,13 +43,13 @@ background-color: #242629;
         background-size: 100% 100%;
     }
     }
-    @media only screen and (max-width: 1020px){
+    @media only screen and (max-width: 992px){
         .jumbotron-two{
             background: url("../images/themiddle.jpg");
             background-size: 100% 100%;
         }
         }
-        @media only screen and (max-width: 1020px){
+        @media only screen and (max-width: 992px){
             .jumbotron-three{
                 background: url("../images/thebottom.jpg");
                 background-size: 100% 100%;
