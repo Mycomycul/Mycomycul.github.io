@@ -30,7 +30,7 @@
 
             <!--NAVIGATION-->
 
-            <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" id="home">
+            <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" id="nav">
                 <div class="container">
                     <a class="visible-lg navbar-brand " href="#" style="line-height:1; margin-top:-5px;">Michael Strunk<br>
                         <span class="sub-head">Software Developer</span></a>
@@ -67,7 +67,7 @@
             <!--END NAVIGATION-->
             <!--HOME HEADER -->
 
-            <div class="jumbotron-fluid jumbotron-one">
+            <div class="jumbotron-fluid jumbotron-one" id="home">
 
                 <div class="container-fluid">
 
@@ -241,7 +241,7 @@
             <!--FOOTER -->
             <div class="row text-center foot bg-dark">
                 <div class=" col-sm-12 col-md-6 col-lg-4 pt-1">
-                    <a href="#home">Return to Top</a>
+                    <a class = "nav-link"href="#home">Return to Top</a>
                 </div>
                 <div class=" col-sm-12 col-md-6 col-lg-4 pt-1">
                     StrunkTech.com
@@ -263,22 +263,25 @@
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/popper.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
-
+<script src="js/jquery.sticky.js"></script>
 
     <script>
         $(function () {
+            //Sticky Nav
+            $( '#nav' ).sticky( { topSpacing:0 } );
             //Set datestamp
             var now = new Date();
             $("#datelabel").html(now.getFullYear());
             //Smooth Scroll
-            $("a").on('click', function (event) {
+            $(".nav-link").on('click', function (event) {
                 if (this.hash !== "") {
                     event.preventDefault();
                     var linkLocation = this.hash;
-
                     $('html,body').animate({
-                        scrollTop: $(linkLocation).offset().top
-                    }, 800, function () { window.location.hash = linkLocation; })
+                        scrollTop: $(linkLocation).offset().top -61
+                    }, 800
+                    // , function () { window.location.hash = linkLocation; }
+                    )
                 };
             });
             //Slide panel

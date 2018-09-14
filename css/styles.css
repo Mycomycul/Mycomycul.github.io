@@ -8,6 +8,9 @@ body{
     color: #cccccc;
    
 }
+*{
+    z-index: 1;
+}
 #the-page{
 border-radius:10px;
 border: 2px orange;
@@ -104,4 +107,7 @@ box-shadow:  2px 2px 4px rgb(0, 0, 0);;
 .link-icon{
     width:20%;
     margin:10%;
+}
+#nav-sticky-wrapper{
+    z-index: 1000;
 }
