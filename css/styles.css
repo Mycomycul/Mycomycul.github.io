@@ -1,114 +1,12 @@
-html {
-    height: 100vh; /* set viewport constraint */
-    min-height: 100%; /* enforce height */
+#nav{
+    position:sticky;
 }
-body{
-    
-    background: rgb(21, 22, 22);
-    color: #cccccc;
-   
+.container{
+    max-width:100%;
+padding-left:0px;
+padding-right:0px;
 }
-*{
-    z-index: 1;
+.fullframe{
+    background-size:100% 100%;
+    padding:0;  
 }
-#the-page{
-border-radius:10px;
-border: 2px orange;
-box-shadow: 2px 2px 4px rgb(255, 251, 0), -2px -2px 4px rgb(255, 251, 0);;
-overflow: hidden;
-background-color: #242629;
-}
-
-.sub-head{
-    font-size: .8rem;
-}
-
-.jumbotron-one{
-    background: url("../images/thetop.jpg");
-    background-size: 100% 100%;
-    
-    -webkit-background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 100%;
-    min-height: 400px;
-    margin-top: -20px; 
-    object-fit:contain;
-    
-}
-
-@media only screen and (max-width: 992px){
-    .jumbotron-one{
-        background-attachment:scroll;      
-        /* height:100%; */
-        /* width:auto;  */
-        background-size: 100% 100%;
-        min-height: 400px;
-    }
-}
-@media only screen and (max-width: 992px){
-    .jumbotron-two{
-        background: url("../images/themiddle.jpg");
-        background-size: 100% 100%;
-    }
-}
-@media only screen and (max-width: 992px){
-    .jumbotron-three{
-        background: url("../images/thebottom.jpg");
-        background-size: 100% 100%;
-    }
-}
-@media only screen and (max-width: 768px){
-    .jumbotron-one{
-        min-height: 300px;
-    }
-}
-
-/*common styling for all text boxes*/
-.info-box{
-    height: auto;
-    min-height: 200px;
-    margin: 0px 10px 0 0px;
-    background-color: #222;
-}
-.skill-box{
-border-radius:10px;
-border: 4px black;
-box-shadow:  2px 2px 4px rgb(0, 0, 0);;
-/* margin:10px 20px 10px 20px; */
-
-
-}
-.carousel{
-    margin: 20px 10px 20px 20px;
-}
-
-#about{
-    font-size: 16px;
-    align-content: center;
-    text-align: center;
-    
-
-}
-
-.about-image{
-    margin: 10% 0 25px 0;
-    border: 0px;
-    border-radius: 15px;
-    width: 60%;
-}
-.foot{
-    color: #aaaaaa;
-    min-height: 40px;
-   
-}
-
-.link-icon{
-    width:20%;
-    margin:10%;
-}
-#nav-sticky-wrapper, .navbar {
-    z-index: 1000 !important;
-}
-
