@@ -1,81 +1,90 @@
 'use strict';
-    /**
-    * getHeight - for elements with display:none
-     */
+/**
+* getHeight - for elements with display:none
+ */
 
-    function slideIn(){
-        let slidenav = document.getElementById('slide');
-          if(slidenav.style.height === "0px"){
-          slidenav.style.height = "100px";}
-          else{
-            slidenav.style.height = "0px"
-          }
-        }
-        var slideData
-
-var getHeight = function(el) {
-        var el_style      = window.getComputedStyle(el),
-            el_display    = el_style.display,
-            el_position   = el_style.position,
-            el_visibility = el_style.visibility,
-            el_max_height = el_style.maxHeight.replace('px', '').replace('%', ''),
-
-            wanted_height = 0;
+//Unrelated future replacement method
+function slideIn() {
+    let slidenav = document.getElementById('slide');
+    if (slidenav.style.height === "0px") {
+        slidenav.style.height = "100px";
+    }
+    else {
+        slidenav.style.height = "0px"
+    }
+}
+var slideData
 
 
-        // if its not hidden we just return normal height
-        if(el_display !== 'none' && el_max_height !== '0') {
-            return el.offsetHeight;
-        }
+var getHeight = function (el) {
+    var el_style = window.getComputedStyle(el),
+        el_display = el_style.display,
+        el_position = el_style.position,
+        el_visibility = el_style.visibility,
+        el_max_height = el_style.maxHeight.replace('px', '').replace('%', ''),
 
-        // the element is hidden so:
-        // making the el block so we can meassure its height but still be hidden
-        el.style.position   = 'absolute';
-        el.style.visibility = 'hidden';
-        el.style.display    = 'block';
+        wanted_height = 0;
 
-        wanted_height     = el.offsetHeight;
 
-        // reverting to the original values
-        el.style.display    = el_display;
-        el.style.position   = el_position;
-        el.style.visibility = el_visibility;
+    // if its not hidden we just return normal height
+    if (el_display !== 'none' && el_max_height !== '0') {
+        return el.offsetHeight;
+    }
 
-        return wanted_height;
-    },
+    // the element is hidden so:
+    // making the el block so we can meassure its height but still be hidden
+    el.style.position = 'absolute';
+    el.style.visibility = 'hidden';
+    el.style.display = 'block';
+
+    wanted_height = el.offsetHeight;
+
+    // reverting to the original values
+    el.style.display = el_display;
+    el.style.position = el_position;
+    el.style.visibility = el_visibility;
+
+    return wanted_height;
+},
 
 
     /**
     * toggleSlide mimics the jQuery version of slideDown and slideUp
     * all in one function comparing the max-heigth to 0
      */
-    toggleSlide = function(el) {
+    toggleSlide = function (el) {
+        let button = document.getElementById('slide-icon');
         var el_max_height = 0;
-
-        if(el.getAttribute('data-max-height')) {
+        if (el.getAttribute('data-max-height')) {
             // we've already used this before, so everything is setup
-            if(el.style.maxHeight.replace('px', '').replace('%', '') === '0') {
+            if (el.style.maxHeight.replace('px', '').replace('%', '') === '0') {
                 el.style.maxHeight = el.getAttribute('data-max-height');
+                button.classList.remove("slide-down");
+                button.classList.add("slide-up");
             } else {
                 el.style.maxHeight = '0';
+                button.classList.remove("slide-up");
+                button.classList.add("slide-down");
             }
         } else {
-            el_max_height                  = getHeight(el) + 'px';
-            el.style['transition']         = 'max-height 0.5s ease-in-out';
-            el.style.overflowY             = 'hidden';
-            el.style.maxHeight             = '0';
+            //setup
+            button.classList.remove("slide-down");
+            button.classList.add("slide-up");
+            el_max_height = getHeight(el) + 'px';
+            el.style['transition'] = 'max-height 0.5s ease-in-out';
+            el.style.overflowY = 'hidden';
+            el.style.maxHeight = '0';
             el.setAttribute('data-max-height', el_max_height);
-            el.style.display               = 'block';
+            el.style.display = 'block';
 
             // we use setTimeout to modify maxHeight later than display (to we have the transition effect)
-            setTimeout(function() {
+            setTimeout(function () {
                 el.style.maxHeight = el_max_height;
             }, 10);
         }
     };
-    document.addEventListener("DOMContentLoaded", function(event) { 
-        var sliderbuttons = document.querySelectorAll('.sliderclick')
-        sliderbuttons.forEach(function(n){n.addEventListener('click', function(e) {
-            slideIn(document.querySelector('#navbuttons'));
-        }, false);})
-      });
+document.addEventListener("DOMContentLoaded", function (event) {
+    document.querySelector('#navslide').addEventListener('click', function (e) {
+        toggleSlide(document.querySelector('#navbuttons'));
+    })
+})
