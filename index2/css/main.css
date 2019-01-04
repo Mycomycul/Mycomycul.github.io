@@ -1,12 +1,14 @@
 body{
+    margin:0;
     margin-top:50px;
+
 }
 
 
 /*NavBar*/
 #navbar{
     overflow:hidden;
-    background-color: rgba(64, 85, 117, 0.075);
+    background-color: rgba(64, 85, 117, 0.452);
     /*Sticky Code*/
     position: fixed;
     top: 0;
@@ -45,7 +47,7 @@ font-size:1rem
 }
 #navslide{
     overflow:hidden;
-    background-color: rgb(64, 85, 117);
+    background-color: rgb(64, 85, 117,.5);
     /*Sticky Code*/
     position: fixed;
     width: 100%;
@@ -71,4 +73,19 @@ font-size:1rem
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
     border-bottom: 15px solid #000;
+}
+
+/*Background Panel*/
+.background-panel{
+background: url("../images/thetop.jpg");
+background-size: 100% 100%;
+-webkit-background-size: cover;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: center center;
+width: 100%;
+
+min-height: 50vw;
+margin-top: -20px; 
+object-fit:contain;
 }
