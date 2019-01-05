@@ -59,12 +59,14 @@ var getHeight = function (el) {
             // we've already used this before, so everything is setup
             if (el.style.maxHeight.replace('px', '').replace('%', '') === '0') {
                 el.style.maxHeight = el.getAttribute('data-max-height');
-                button.classList.remove("slide-down");
+                
                 button.classList.add("slide-up");
+                button.classList.remove("sliding");
             } else {
                 el.style.maxHeight = '0';
+                button.classList.add("sliding");
+
                 button.classList.remove("slide-up");
-                button.classList.add("slide-down");
             }
         } else {
             //setup
