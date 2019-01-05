@@ -165,8 +165,8 @@ position:relative;
 
 .box{
     position:absolute;
-    border: solid 5px black;
-    transition: width , height ,left , top , transform, border ;
+    border: solid 5px white;
+    transition: width , height ,left , top , transform, border .6s .8s ;
     transition-duration: .6s;
     transition-timing-function: cubic-bezier(0., .5, .58, 1)
 }
@@ -190,14 +190,14 @@ position:relative;
     left:30%;
     height: 25vh;
     width: 25vh;
-    border: solid 5px white;
+    border: solid 5px black;
 }
 .box-up{
     top:0;
     left:0px;
     height:0px;
     width:0px;
-    border:none;    
+ 
 }
 
 #profile-pic{
