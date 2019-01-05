@@ -1,16 +1,38 @@
 'use strict';
-/**
-* getHeight - for elements with display:none
- */
 
-//Unrelated future replacement method
-function flyin() {
+var flyin = function flyin() {
+    let pic = document.querySelector('#profile-pic');
+    let picWidth = getElementWidth(pic);
+
     Array.from(document.getElementsByClassName('box')).forEach(element => {
+        element.style.width = picWidth + 'px';
         element.classList.remove("box-up");
         element.classList.add("un-box");
         element.classList.add("centery");
+
     });
 }
+var flyout = function flyout() {
+    Array.from(document.getElementsByClassName('box')).forEach(element => {
+        element.removeAttribute('style');
+        element.classList.add("box-up");
+        element.classList.remove("un-box");
+        element.classList.remove("centery");
+
+    });
+}
+
+//Create temporary element to see what size it will be when adding profile-pic-check class
+function getElementWidth(original) {
+    let picTest = original.cloneNode(true);
+    picTest.classList.remove('profile-pic');
+    picTest.classList.add('profile-pic-check');
+    document.body.appendChild(picTest);
+    let picwidth = picTest.offsetWidth;
+    picTest.parentNode.removeChild(picTest);
+    return picwidth;
+}
+
 
 
 
@@ -58,7 +80,7 @@ var getHeight = function (el) {
             // we've already used this before, so everything is setup
             if (el.style.maxHeight.replace('px', '').replace('%', '') === '0') {
                 el.style.maxHeight = el.getAttribute('data-max-height');
-                
+
                 button.classList.add("slide-up");
                 button.classList.remove("slide-down");
             } else {
@@ -86,9 +108,25 @@ var getHeight = function (el) {
     };
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    //Setup Slider
+    //Setup Nav Slider
     document.querySelector('#navslide').addEventListener('click', function (e) {
         toggleSlide(document.querySelector('#navbuttons'));
     })
+
+    //Setup About Scroll in
+    document.addEventListener("scroll", function () {
+        let aboutbounds = document.querySelector('#about-panel').getBoundingClientRect();
+        if (
+            aboutbounds.top >= 0 &&
+            aboutbounds.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        ) {
+            //Bring in Profile Pic
+            flyin();
+        }
+        else{
+            //Profile Pic
+            flyout();
+        }
+    });
 
 })
