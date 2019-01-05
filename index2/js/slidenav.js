@@ -4,16 +4,15 @@
  */
 
 //Unrelated future replacement method
-function slideIn() {
-    let slidenav = document.getElementById('slide');
-    if (slidenav.style.height === "0px") {
-        slidenav.style.height = "100px";
-    }
-    else {
-        slidenav.style.height = "0px"
-    }
+function flyin() {
+    Array.from(document.getElementsByClassName('box')).forEach(element => {
+        element.classList.remove("box-up");
+        element.classList.add("un-box");
+        element.classList.add("centery");
+    });
 }
-var slideData
+
+
 
 
 var getHeight = function (el) {
@@ -61,10 +60,10 @@ var getHeight = function (el) {
                 el.style.maxHeight = el.getAttribute('data-max-height');
                 
                 button.classList.add("slide-up");
-                button.classList.remove("sliding");
+                button.classList.remove("slide-down");
             } else {
                 el.style.maxHeight = '0';
-                button.classList.add("sliding");
+                button.classList.add("slide-down");
 
                 button.classList.remove("slide-up");
             }
@@ -85,8 +84,11 @@ var getHeight = function (el) {
             }, 10);
         }
     };
+
 document.addEventListener("DOMContentLoaded", function (event) {
+    //Setup Slider
     document.querySelector('#navslide').addEventListener('click', function (e) {
         toggleSlide(document.querySelector('#navbuttons'));
     })
+
 })
