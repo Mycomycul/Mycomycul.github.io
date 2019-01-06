@@ -1,40 +1,12 @@
 'use strict';
 
-var flyin = function flyin() {
-    let pic = document.querySelector('#profile-pic');
-    let picWidth = getElementWidth(pic);
+document.addEventListener("DOMContentLoaded", function (event) {
+    //Setup Nav Slider
+    document.querySelector('#navslide').addEventListener('click', function (e) {
+        toggleSlide(document.querySelector('#navbuttons'));
+    })
 
-    Array.from(document.getElementsByClassName('box')).forEach(element => {
-        element.style.width = picWidth + 'px';
-        element.classList.remove("box-up");
-        element.classList.add("un-box");
-        element.classList.add("centery");
-
-    });
-}
-var flyout = function flyout() {
-    Array.from(document.getElementsByClassName('box')).forEach(element => {
-        element.removeAttribute('style');
-        element.classList.add("box-up");
-        element.classList.remove("un-box");
-        element.classList.remove("centery");
-
-    });
-}
-
-//Create temporary element to see what size it will be when adding profile-pic-check class
-function getElementWidth(original) {
-    let picTest = original.cloneNode(true);
-    picTest.classList.remove('profile-pic');
-    picTest.classList.add('profile-pic-check');
-    document.body.appendChild(picTest);
-    let picwidth = picTest.offsetWidth;
-    picTest.parentNode.removeChild(picTest);
-    return picwidth;
-}
-
-
-
+})
 
 
 var getHeight = function (el) {
@@ -108,10 +80,6 @@ var getHeight = function (el) {
     };
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    //Setup Nav Slider
-    document.querySelector('#navslide').addEventListener('click', function (e) {
-        toggleSlide(document.querySelector('#navbuttons'));
-    })
 
     //Setup About Scroll in
     document.addEventListener("scroll", function () {
@@ -130,3 +98,37 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
 })
+
+var flyin = function flyin() {
+    let pic = document.querySelector('#profile-pic');
+    let picWidth = getElementWidth(pic);
+
+    Array.from(document.getElementsByClassName('box')).forEach(element => {
+        element.style.width = picWidth + 'px';
+        element.classList.remove("box-up");
+        element.classList.add("un-box");
+        element.classList.add("centery");
+        element.addEventListener("webkitTransitionEnd", () => element.style.transitionDuration = "0s");  // Code for Safari 3.1 to 6.0
+        element.addEventListener("transitionend", () => element.style.transitionDuration = "0s");   
+    });
+}
+var flyout = function flyout() {
+    Array.from(document.getElementsByClassName('box')).forEach(element => {
+        element.removeAttribute('style');
+        element.classList.add("box-up");
+        element.classList.remove("un-box");
+        element.classList.remove("centery");
+
+    });
+}
+
+//Create temporary element to see what size it will be when adding profile-pic-check class
+function getElementWidth(original) {
+    let picTest = original.cloneNode(true);
+    picTest.classList.remove('profile-pic');
+    picTest.classList.add('profile-pic-check');
+    document.body.appendChild(picTest);
+    let picwidth = picTest.offsetWidth;
+    picTest.parentNode.removeChild(picTest);
+    return picwidth;
+}
