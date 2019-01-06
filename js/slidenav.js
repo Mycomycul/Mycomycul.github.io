@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     //Setup About Scroll in
     document.addEventListener("scroll", function () {
-        let aboutbounds = document.querySelector('#about-panel').getBoundingClientRect();
+        let aboutbounds = document.querySelector('#about-panel-container').getBoundingClientRect();
         if (
             aboutbounds.top >= 0 &&
             aboutbounds.bottom <= (window.innerHeight || document.documentElement.clientHeight)

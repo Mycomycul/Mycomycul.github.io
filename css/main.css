@@ -139,16 +139,14 @@ animation: slide-up-appear ease-in-out .5s  ;
     border-bottom:16px solid #000;}
 }
 
-
-
-
+/*Transparent separator between content panels*/
 .image-panel{
 width: 100%;
 min-height: 25vw;
 } 
 
 /*TODO: Finish bottom half of gradient*/
-.panel{
+.content-panel{
 overflow: hidden;
 background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.5),rgba(0,0,0,.7),rgba(0,0,0,.9) , rgba(0,0,0) 25%,rgba(0,0,0) 75%,rgba(0,0,0,.9), rgba(0,0,0,.7),  rgba(0,0,0,.5) ,rgba(0,0,0,0) );
 height:200vh;
@@ -156,9 +154,8 @@ position:relative;
 }
 
 
-.about-panel{
+.inner-panel-container{
     min-height: 50vh;
-    background-color:black;
     width:100%;
 }
 
