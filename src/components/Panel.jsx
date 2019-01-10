@@ -10,6 +10,7 @@ class Panel extends Component {
           <ProjectBox />
           <ProjectBox />
           <ProjectBox />
+          <ProjectBox />
         </div>
       </div>
     );

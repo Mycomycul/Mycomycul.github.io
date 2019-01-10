@@ -5,8 +5,14 @@ class ProjectBox extends Component {
   state = {};
   render() {
     return (
-      <div className="col-4">
-        <div className="project-box">Hello</div>
+      <div className=" col-4">
+        <div className="project-box">
+          <title className="griditem project-title">Title</title>
+          <section class="project-links grid-item">Links</section>
+          <section class="project-description grid-item">
+            Description. This is a description of the project
+          </section>
+        </div>
       </div>
     );
   }
