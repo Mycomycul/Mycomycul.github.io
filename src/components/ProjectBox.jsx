@@ -7,7 +7,9 @@ class ProjectBox extends Component {
     return (
       <div className=" col-4">
         <div className="project-box">
-          <title className="griditem project-title">Title</title>
+          <title className="griditem project-title">
+            {this.props.project.title}
+          </title>
           <section class="project-links grid-item">Links</section>
           <section class="project-description grid-item">
             Description. This is a description of the project

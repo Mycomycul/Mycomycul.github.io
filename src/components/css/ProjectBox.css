@@ -11,6 +11,7 @@ background-color:#222;
 }
 
 .project-title{
+    font-weight:bold;
     display:grid;
     background-color:#008156;
     grid-column-start: 1;
