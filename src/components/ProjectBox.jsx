@@ -12,7 +12,7 @@ class ProjectBox extends Component {
           </title>
           <section class="project-links grid-item">Links</section>
           <section class="project-description grid-item">
-            Description. This is a description of the project
+            {this.props.project.description}
           </section>
         </div>
       </div>

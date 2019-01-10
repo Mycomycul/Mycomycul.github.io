@@ -5,7 +5,7 @@ import './App.css';
 export default class App extends Component {
   state = {
     projectBox:[
-      {title:"PDF Writer"}
+      {title:"PDF Writer",description:"Description. This is a description of the project"}
     ]
 
   }
