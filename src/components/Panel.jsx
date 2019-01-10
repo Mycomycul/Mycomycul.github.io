@@ -9,7 +9,7 @@ class Panel extends Component {
       <div className="inner-panel-container centery">
         <div className="project-holder row">
           {projectBox.map(project => (
-            <ProjectBox project={project} />
+            <ProjectBox key={project.id} project={project} />
           ))}
         </div>
       </div>

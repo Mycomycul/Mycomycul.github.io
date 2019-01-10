@@ -170,7 +170,7 @@ position:relative;
     position:absolute;
     border: solid 0px white;
     transition: width , height ,left , display, top , transform, border .6s .8s ;
-    transition-duration: .6s;
+    transition-duration: .4s;
     transition-timing-function: cubic-bezier(0., .5, .58, 1);
     object-fit: cover;
 }
@@ -179,17 +179,17 @@ position:relative;
 
 }
 .box-2{
-    transition-delay:.15s;
+    transition-delay:.1s;
 }
 .box-3{
-    transition-delay:.30s
+    transition-delay:.2s
 }
 .box-4{
-    transition-delay:.45s
+    transition-delay:.3s
 
 }
 .box-5{
-    transition-delay:.6s;
+    transition-delay:.4s;
 }
 
 .un-box{
