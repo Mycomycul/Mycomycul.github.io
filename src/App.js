@@ -7,6 +7,7 @@ import "./App.css";
 export default class App extends Component {
   state = {
     projectBox: [
+
       {
         id: 0,
         title: "PDF Writer",
@@ -36,28 +37,35 @@ export default class App extends Component {
         description: "Description. This is a description of the project"
       }
     ],
-    modalProject:{
-      id: null,
-      title: "",
-      summary: "",
-      description:"",
-      display: false
-
-    }
+    modalProject: {}
   };
-  handleModal = projectId => {
+  handleOpenModal = projectId => {
     const modalProject = this.state.projectBox[projectId];
     modalProject.display = true;
-    this.setState({modalProject:modalProject})
+    this.setState({ modalProject: modalProject });
   };
+  handleCloseModal = () => {
+    const modalProject = {};
+    this.setState({modalProject: modalProject});
+  };
+  handleWindowClick = event => {
+    if(event.target == this.modal){
+      this.handleCloseModal();
+    }
+  }
+  componentDidMount(){
+    this.modal = document.getElementById('project-modal');
+    window.addEventListener('click',this.handleWindowClick);
+  }
   render() {
     return (
       <React.Fragment>
         <Panel
           projectBox={this.state.projectBox}
-          onClick={this.handleModal}
+          onClick={this.handleOpenModal}
+
         />
-        <Modal project = {this.state.modalProject}/>
+        <Modal project={this.state.modalProject} onClose={this.handleCloseModal}/>
       </React.Fragment>
     );
   }

@@ -3,18 +3,22 @@ import "./css/Modal.css";
 
 export default class Modal extends Component {
   render() {
+    //If no data is received, clear the modal and close it
+    const { description = "", display = false } = this.props.project || {};
     return (
-      <div id="project-modal" className={this.getDisplayClass()}>
+      <div id="project-modal" className={this.getDisplayClass(display)}>
         <div className="modal-content">
-          <span className="modal-close">&times;</span>
-          <p>{this.props.project.description}</p>
+          <span onClick={this.props.onClose} className="modal-close">
+            &times;
+          </span>
+          <p>{description}</p>
         </div>
       </div>
     );
   }
-  getDisplayClass() {
+  getDisplayClass(display) {
     let classes = "modal";
-    if (this.props.project.display === true) {
+    if (display === true) {
       classes += " modal-visible";
     }
     return classes;
