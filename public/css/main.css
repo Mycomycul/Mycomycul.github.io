@@ -21,7 +21,7 @@ body{
 
 
 /*NavBar*/
-#navbar{
+.navbar{
     overflow:hidden;
     background-color: rgba(64, 85, 117, 0.452);
     /*Sticky Code*/

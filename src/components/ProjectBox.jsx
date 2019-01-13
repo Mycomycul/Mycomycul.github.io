@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import "./css/ProjectBox.css";
 
 class ProjectBox extends Component {
-  state = {};
   render() {
     return (
-      <div className=" col-4">
-        <div className="project-box">
+      <div className="col-4">
+        <div
+          className="project-box"
+          onClick={() => this.props.onClick(this.props.project.id)}
+        >
           <title className="griditem project-title">
             {this.props.project.title}
           </title>

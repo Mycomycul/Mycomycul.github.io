@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import Panel from "./components/Panel";
+import Modal from "./components/Modal";
+
 import "./App.css";
 
 export default class App extends Component {
   state = {
     projectBox: [
       {
-        id: 1,
+        id: 0,
         title: "PDF Writer",
         summary:
           "Take HTML form inputs and print them to a pre-existing PDF document",
@@ -28,14 +30,35 @@ export default class App extends Component {
           "This is a sample version of a larger project for digitally signing large PDF contracts. The company needed a solution that didn't require an API subscription or creating a new editable PDF. \n\n This sample is for registering your feline when moving to the moon. It recalculates your pet's weight for the moon, fills in the contract with the modfied content and also issues a registration certificate from the lunar authorities"
       },
       {
-        id: 2,
+        id: 1,
         title: "PDF Writer",
         summary: "",
         description: "Description. This is a description of the project"
       }
-    ]
+    ],
+    modalProject:{
+      id: null,
+      title: "",
+      summary: "",
+      description:"",
+      display: false
+
+    }
+  };
+  handleModal = projectId => {
+    const modalProject = this.state.projectBox[projectId];
+    modalProject.display = true;
+    this.setState({modalProject:modalProject})
   };
   render() {
-    return <Panel projectBox={this.state.projectBox} />;
+    return (
+      <React.Fragment>
+        <Panel
+          projectBox={this.state.projectBox}
+          onClick={this.handleModal}
+        />
+        <Modal project = {this.state.modalProject}/>
+      </React.Fragment>
+    );
   }
 }
