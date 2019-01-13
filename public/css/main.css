@@ -21,9 +21,9 @@ body{
 
 
 /*NavBar*/
-.navbar{
+#navbar{
     overflow:hidden;
-    background-color: rgba(64, 85, 117, 0.452);
+    background-color: rgba(123, 135, 153, 0.452);
     /*Sticky Code*/
     position: fixed;
     top: 0;
@@ -34,9 +34,7 @@ body{
     text-justify: distribute;
     transition:height 0.3s ease-out;
     height:auto;
-    z-index: 1000;
-
-    
+    z-index: 1000;  
 }
 #navbuttons{
     display:none;
@@ -65,7 +63,7 @@ font-size:1rem
 }
 #navslide{
     overflow:hidden;
-    background-color: rgba(64, 85, 117,.5);
+    background-color: rgba(132, 157, 195, 0.5);
     /*Sticky Code*/
     position: fixed;
     width: 100%;

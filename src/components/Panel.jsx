@@ -7,7 +7,7 @@ class Panel extends Component {
     const { projectBox, onClick } = this.props;
     return (
       <div className="inner-panel-container centery">
-        <div className="project-holder row">
+        <div id="projects" className="project-holder row">
           {projectBox.map(project => (
             <ProjectBox key={project.id} project={project} onClick={onClick} />
           ))}
