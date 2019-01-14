@@ -11,7 +11,11 @@ export default class Modal extends Component {
           <span onClick={this.props.onClose} className="modal-close">
             &times;
           </span>
-          <p>{description}</p>
+          {/* Breaks apart text on newlines (\n) and puts them each in a new span */}
+          {description.split("\n").map((item, key) => {
+            return <p key={key}>{item}</p>;
+          })}
+          {/* <p>{description}</p> */}
         </div>
       </div>
     );

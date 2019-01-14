@@ -19,15 +19,7 @@ class ProjectBox extends Component {
             </span>
             <br />
             <strong>Skills:</strong> {this.props.project.skills}
-            {/* Breaks apart text on newlines (\n) and puts them each in a new span */}
-            {this.props.project.description.split("\n").map((item, key) => {
-              return (
-                <span key={key}>
-                  {item}
-                  <br />
-                </span>
-              );
-            })}
+            <br />
           </section>
         </div>
       </div>
