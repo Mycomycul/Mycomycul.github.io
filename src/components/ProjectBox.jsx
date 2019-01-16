@@ -4,7 +4,7 @@ import "./css/ProjectBox.css";
 class ProjectBox extends Component {
   render() {
     return (
-      <div className="col-4">
+      <div className="col-4 col-sm-6">
         <div
           className="project-box"
           onClick={() => this.props.onClick(this.props.project.id)}
