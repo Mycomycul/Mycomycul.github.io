@@ -55,3 +55,11 @@
   display: flex;
   justify-content: space-around;
 }
+
+.project-pic{
+    width:50%;
+
+}
+.in-dev{
+    display:inline;
+}

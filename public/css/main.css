@@ -2,7 +2,7 @@
 body{
     margin:0;
     margin-top:50px;
-background-color: transparent;
+background-color: black;
 
     
 }
@@ -15,8 +15,14 @@ background-color: transparent;
 .centerx{
         margin-left:50%;
     margin-right:50%;
-    transform: translate(-50%, 0);
-
+    transform: translateX(-50%);
+}
+.center{
+    position:absolute;
+    top:50%; 
+    margin-left:50%;
+    margin-right:50%;
+    transform: translate(-50%,-50%);
 }
 
 
@@ -145,6 +151,7 @@ animation: slide-up-appear ease-in-out .5s  ;
 top:0;
 width: 100%;
 position:relative;
+font-size:10vh;
 }
 .image-panel::after {
     background-size: 100% 100%;
@@ -164,12 +171,18 @@ position:relative;
 }
 #first-image-panel{
 background:linear-gradient(175deg,rgba(0,0,0,0),  rgba(30,30,30,.2) 20%,rgba(0,0,0,.8) 55%,rgba(0,0,0) 85%);
-min-height: 120vw;
-
+min-height: 80vw;
+top:-50px;
 }
 #second-image-panel{
     background:linear-gradient(185deg,rgba(0,0,0)7%,rgba(0,0,0,.8) 20%,rgba(0,0,0,.4) 30%,rgba(0,0,0,0),rgba(30,30,30,.4) 70%,rgba(0,0,0,.8) 80%,rgba(0,0,0) 93%);
-min-height: 180vw;
+min-height: 80vw;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+#third-image-panel{
+    background:linear-gradient(185deg,rgba(0,0,0)7%,rgba(0,0,0,.8) 20%,rgba(0,0,0,.4) 30%,rgba(0,0,0,0),rgba(30,30,30,.4) 70%,rgba(0,0,0,.8) 80%,rgba(0,0,0) 93%);
+min-height: 80vw;
 }
 #first-image-panel::after{
     background-image: url("../images/thetop.jpg");
@@ -179,6 +192,11 @@ min-height: 180vw;
     background-image: url("../images/themiddle.jpg");
 
 }
+#third-image-panel::after{
+    background-image: url("../images/thebottom.png");
+
+}
+
 
 /*TODO: Finish bottom half of gradient*/
 
@@ -201,7 +219,7 @@ position:relative;
     position:absolute;
     border: solid 0px white;
     transition: width , height ,left , display, top , transform, border .6s .8s ;
-    transition-duration: .4s;
+    transition-duration: 400ms;
     transition-timing-function: cubic-bezier(0., .5, .58, 1);
     object-fit: cover;
 }
@@ -210,17 +228,17 @@ position:relative;
 
 }
 .box-2{
-    transition-delay:.1s;
+    transition-delay:75ms;
 }
 .box-3{
-    transition-delay:.2s
+    transition-delay:.150ms;
 }
 .box-4{
-    transition-delay:.3s
+    transition-delay:225ms;
 
 }
 .box-5{
-    transition-delay:.4s;
+    transition-delay:300ms;
 }
 
 .un-box{
