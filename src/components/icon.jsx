@@ -1,32 +1,20 @@
 import React, { Component } from "react";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import {
-  faHtml5,
-  faCss3Alt,
-  faJsSquare
-} from "@fortawesome/free-brands-svg-icons";
-
-library.add(fab, faHtml5, faCss3Alt, faJsSquare);
-
-// import "./icon.css";
+import symboldefs from "./css/symbol-defs.svg";
 
 const icons = {
-  HTML: { icon: ["fab", "html5"], color: "orange" },
-  "React.js": { icon: ["fab", "react"] },
-  CSS: { icon: ["fab", "css3"] },
-  JS: { icon: ["fab", "js"], color: "yellow" }
+  HTML: { icon: "icon-html-five" },
+  "React.js": { icon: "icon-react" },
+  CSS: { icon: "icon-css3" },
+  JS: { icon: "icon-javascript" }
 };
 
 export default class icon extends Component {
   render() {
     const { icon } = this.props;
     return icons[icon] ? (
-      <FontAwesomeIcon
-        color={icons[icon].color || ""}
-        icon={icons[icon].icon}
-      />
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+        <use xlinkHref={`${symboldefs}#${icons[icon].icon}`} />
+      </svg>
     ) : (
       <span>{icon}</span>
     );
