@@ -365,6 +365,10 @@ transform: translate(-50%, -50%) ;
 }
 
 .profile-pic-check {
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+  width: auto;
   height: 35vh;
   display: hidden;
 }
