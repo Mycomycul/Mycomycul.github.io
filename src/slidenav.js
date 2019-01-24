@@ -81,9 +81,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
       .querySelector("#about-panel-container")
       .getBoundingClientRect();
     if (
-      aboutbounds.top >= 0 &&
-      aboutbounds.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight)
+      aboutbounds.top >= 0 && aboutbounds.top <= window.innerHeight - 200 ||
+      aboutbounds.bottom <= window.innerHeight && aboutbounds.bottom > 200
+      
+      //   (window.innerHeight || document.documentElement.clientHeight)
     ) {
       //Bring in Profile Pic
       flyin();
@@ -91,6 +92,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
       //Profile Pic
       flyout();
     }
+  });
+  window.addEventListener("resize", function() {
+    Array.from(document.getElementsByClassName("box")).forEach(element => {
+
+        element.classList.add("box-resize");
+      
+    });
+    flyout();
+    flyin();
+    Array.from(document.getElementsByClassName("box")).forEach(element => {
+      element.classList.remove("box-resize");
+    });
   });
 });
 
@@ -102,15 +115,6 @@ var flyin = function flyin() {
     element.style.width = picWidth + "px";
     element.classList.remove("box-up");
     element.classList.add("un-box");
-    element.classList.add("centery");
-    element.addEventListener(
-      "webkitTransitionEnd",
-      () => (element.style.transitionDuration = "0s")
-    ); // Code for Safari 3.1 to 6.0
-    element.addEventListener(
-      "transitionend",
-      () => (element.style.transitionDuration = "0s")
-    );
   });
 };
 var flyout = function flyout() {
@@ -118,7 +122,7 @@ var flyout = function flyout() {
     element.removeAttribute("style");
     element.classList.add("box-up");
     element.classList.remove("un-box");
-    element.classList.remove("centery");
+    // element.classList.remove("centery");
   });
 };
 

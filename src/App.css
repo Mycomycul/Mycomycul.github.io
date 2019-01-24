@@ -11,6 +11,9 @@
   padding: 15px;
   box-sizing: border-box;
 }
+[class*="col-"]::after {
+  clear:both;
+}
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
