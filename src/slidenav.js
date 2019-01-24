@@ -135,4 +135,5 @@ function getElementWidth(original) {
   let picwidth = picTest.offsetWidth;
   picTest.parentNode.removeChild(picTest);
   return picwidth;
+  
 }
