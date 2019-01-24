@@ -35,7 +35,8 @@ export default class App extends Component {
         skills: ["React.js", "HTML", "CSS", "JS"],
         links:[{label:"Strunktech.com",link:"www.strunktech.com"}],
         description:
-          ["This website is currently being transtioned to a React Product when I can spare time"]
+          ["This website is currently being transtioned to a React Product when I can spare time"],
+          indev:"Create skill SVGs. Add projects"
       },
       {
         title: "My Trails",

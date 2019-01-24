@@ -11,7 +11,7 @@ class ProjectBox extends Component {
       <div className="col-4 col-sm-6">
         <div className="project-box" onClick={() => onClick(id)}>
           <title className="griditem project-title">{project.title}</title>
-          <section className="project-links grid-item">Links</section>
+          {/* <section className="project-links grid-item">Links</section> */}
           <section className="project-description grid-item">
             <span className="project-summary">{project.summary}</span>
             <br />
