@@ -178,6 +178,9 @@ padding:10px;
     text-shadow:3px 3px 5px rgb(65, 82, 99), 3px 3px 15px rgba(0, 122, 245, 0.5);
 
 }
+@media only screen and (min-width:1280px){
+  #first-image-label{top:25%}
+}
 #second-image-label{
     text-shadow:3px 3px 5px rgb(65, 82, 99),3px 3px 15px #005c2e;
 }
