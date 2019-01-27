@@ -15,17 +15,11 @@ class ProjectBox extends Component {
           <section className="project-description grid-item">
             <span className="project-summary">{project.summary}</span>
             <br />
-
-            {/* {project.skills.map((skill, index) => (
-              <span key={index}>{skill} </span>
-            ))} */}
-            {project.skills.map((skill, index) => (
-              <Icon key={index} icon={skill} displayType="icon" />
-            ))}
-            <br />
-            {sepskills.map((skill, index) => (
-              <Icon key={index} icon={skill} displayType="text" />
-            ))}
+            <div class="icon-container">
+              {project.skills.map((skill, index) => (
+                <Icon key={index} icon={skill} size="30" displayType="icon" />
+              ))}
+            </div>
             <br />
           </section>
         </div>
