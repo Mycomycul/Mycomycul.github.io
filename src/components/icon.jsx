@@ -7,11 +7,15 @@ const icons = {
   "React.js": { icon: "react" },
   CSS: { icon: "css3" },
   JS: { icon: "javascript" },
-  "ASP.NET": { icon: "dot-net" },
+  "ASP.NET MVC": { icon: "MVC" },
   Python: { icon: "python" },
   "Raspberry Pi": { icon: "raspberrpi" },
   Photoshop: { icon: "adobephotoshop" },
-  "Google Chrome Extensions": { icon: "chrome" }
+  "Google Chrome Extensions": { icon: "chrome" },
+  "C#": { icon: "c-sharp" },
+  "SQL Server Spatial Data": { icon: "SQL" },
+  "Google Maps": { icon: "google-maps" },
+  GeoJSON: { icon: "geo-json" }
 };
 
 export default class icon extends Component {
