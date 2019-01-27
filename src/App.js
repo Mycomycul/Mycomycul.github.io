@@ -32,7 +32,7 @@ export default class App extends Component {
       {
         title: "Strunktech.com",
         summary: "Project portfolio website built with React",
-        skills: ["React.js", "HTML", "CSS", "JS"],
+        skills: ["React.js", "HTML", "CSS", "JavaScript"],
         links:[{label:"Strunktech.com",link:"www.strunktech.com"}],
         description:
           ["This website is currently being transtioned to a React Product when I can spare time"],
@@ -44,7 +44,7 @@ export default class App extends Component {
         skills: [
           "C#",
           "ASP.NET MVC",
-          "JS",
+          "JavaScript",
           "GeoJSON",
           "SQL Server Spatial Data",
           "Google Maps"
@@ -60,7 +60,7 @@ export default class App extends Component {
         title: "MSDN Resize",
         summary: "Chrome MSDN restyling extension for smaller screens ",
         skills: [
-          "Google Chrome Extensions", "JS", "CSS", "HTML"
+          "Google Chrome Extensions", "JavaScript", "CSS", "HTML"
         ],
         image:"MSDNResize.png",
         links:[{label:"Chrome Store",link:"https://chrome.google.com/webstore/detail/msdn-resize/bdcaffgeeafpmnpeogoipgfhklbppjlc"},{label:"Github",link:"https://github.com/mycomycul/MSDNFix"}],
