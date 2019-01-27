@@ -7,6 +7,7 @@ const icons = {
   "React.js": { icon: "react" },
   CSS: { icon: "css3" },
   JS: { icon: "javascript" },
+  JavaScript: { icon: "javascript" },
   "ASP.NET MVC": { icon: "MVC" },
   Python: { icon: "python" },
   "Raspberry Pi": { icon: "raspberrpi" },
@@ -15,28 +16,31 @@ const icons = {
   "C#": { icon: "c-sharp" },
   "SQL Server Spatial Data": { icon: "SQL" },
   "Google Maps": { icon: "google-maps" },
-  GeoJSON: { icon: "geo-json" }
+  GeoJSON: { icon: "geo-json" },
+  JSON: { icon: "json" }
 };
 
 export default class icon extends Component {
   render() {
-    const { icon, displayType } = this.props;
+    const { icon, displayType, size, children } = this.props;
 
     if (displayType != "text" && icons[icon]) {
-      return renderIcon(icon);
+      return renderIcon(icon, size, children);
     } else if (displayType != "icon") {
       return renderText(icon);
     }
     return null;
   }
 }
-function renderIcon(icon) {
+function renderIcon(icon, size, children) {
   return (
-    <i className="icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+    <span className="icon tooltip">
+      <span className="tooltiptext">{icon}</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size}>
         <use xlinkHref={`${symboldefs}#${"icon-" + icons[icon].icon}`} />
-      </svg>
-    </i>
+      </svg>{" "}
+      {children}
+    </span>
   );
 }
 
