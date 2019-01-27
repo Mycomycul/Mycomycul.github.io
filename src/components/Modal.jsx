@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./css/Modal.css";
+import Icon from "./icon";
 function intersperse(arr, sep) {
   if (arr.length !== 0) {
     return arr.slice(1).reduce(
@@ -56,9 +57,12 @@ export default class Modal extends Component {
               <h4 className="in-dev">In DEV:</h4> <span>{indev}</span>
             </p>
           )}
-          <section>
-            {sepskills.map((skill, index) => (
-              <span key={index}>{skill} </span>
+
+          <section id="skills">
+            {skills.map((skill, index) => (
+              <Icon key={index} icon={skill} size="30" displayType="icon">
+                {skill}{" "}
+              </Icon>
             ))}
           </section>
           <hr />
