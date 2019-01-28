@@ -1,6 +1,7 @@
 {
   "name": "website",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
@@ -27,4 +28,5 @@
     "not ie <= 11",
     "not op_mini all"
   ]
+
 }
