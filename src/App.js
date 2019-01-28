@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Panel from "./components/Panel";
 import Modal from "./components/Modal";
+import TopArrow from "./components/TopArrow";
+
 
 import "./App.css";
 
@@ -99,6 +101,7 @@ export default class App extends Component {
           project={this.state.modalProject}
           onClose={this.handleCloseModal}
         />
+        <TopArrow></TopArrow>
       </React.Fragment>
     );
   }

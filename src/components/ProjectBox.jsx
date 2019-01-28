@@ -15,7 +15,7 @@ class ProjectBox extends Component {
           <section className="project-description grid-item">
             <span className="project-summary">{project.summary}</span>
             <br />
-            <div class="icon-container">
+            <div className="icon-container">
               {project.skills.map((skill, index) => (
                 <Icon key={index} icon={skill} size="30" displayType="icon" />
               ))}
