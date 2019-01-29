@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./css/ProjectBox.css";
-import Icon from "./icon";
+import Icon from "./Icon";
 import intersperse from "./function.js";
 
 class ProjectBox extends Component {

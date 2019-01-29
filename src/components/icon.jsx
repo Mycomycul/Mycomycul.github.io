@@ -20,7 +20,7 @@ const icons = {
   JSON: { icon: "json" }
 };
 
-export default class icon extends Component {
+export default class Icon extends Component {
   render() {
     const { icon, displayType, size, children } = this.props;
 
@@ -36,7 +36,12 @@ function renderIcon(icon, size, children) {
   return (
     <span className="icon tooltip">
       <span className="tooltiptext">{icon}</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size}>
+      <svg
+        className="shadow"
+        xmlns="http://www.w3.org/2000/svg"
+        width={size}
+        height={size}
+      >
         <use xlinkHref={`${symboldefs}#${"icon-" + icons[icon].icon}`} />
       </svg>{" "}
       {children}
