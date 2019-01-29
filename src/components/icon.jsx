@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import symboldefs from "./css/symbol-defs.svg";
+
 import "./css/icon.css";
 
 const icons = {
@@ -42,7 +42,7 @@ function renderIcon(icon, size, children) {
         width={size}
         height={size}
       >
-        <use xlinkHref={`${symboldefs}#${"icon-" + icons[icon].icon}`} />
+        <use href={`#${"icon-" + icons[icon].icon}`} />
       </svg>{" "}
       {children}
     </span>

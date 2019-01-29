@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Panel from "./components/Panel";
 import Modal from "./components/Modal";
 import TopArrow from "./components/TopArrow";
+import symboldefs, { ReactComponent as Icons } from "./components/css/symbol-defs.svg";
+// import symboldefs, { ReactComponent as Icons } from "./css/symbol-defs.svg";
 
 
 import "./App.css";
@@ -93,6 +95,7 @@ export default class App extends Component {
   render() {
     return (
       <React.Fragment>
+      <Icons/>
         <Panel
           projectBox={this.state.projectBox}
           onClick={this.handleOpenModal}
@@ -102,6 +105,7 @@ export default class App extends Component {
           onClose={this.handleCloseModal}
         />
         <TopArrow></TopArrow>
+        {/* <IconTest></IconTest> */}
       </React.Fragment>
     );
   }
