@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./css/Modal.css";
-import Icon from "./icon";
+import Icon from "./Icon";
 function intersperse(arr, sep) {
   if (arr.length !== 0) {
     return arr.slice(1).reduce(
