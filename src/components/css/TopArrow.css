@@ -4,16 +4,19 @@
   
     color:black;
     font-weight: 600;
-    background-color: #005c2e77;
+background-color:#222;
+/* background-color: #005c2e77; */
     border: solid #FFFFFF99 2px;
     border-radius: 10px;
     position:fixed;
     bottom:20px;
     right:20px;
     z-index:1000;
+    transition: all .2s;
   }
   #top-arrow-box:hover{
-    background-color: #005c2e;
+    transform:scale(1.1);
+    background-color: #050e09;
   border: solid #03ffab 2px;;
   }
   #top-arrow-box:before{
