@@ -18,7 +18,8 @@ const icons = {
   "Google Maps": { icon: "google-maps" },
   GeoJSON: { icon: "geo-json" },
   JSON: { icon: "json" },
-  Arduino: { icon: "arduino" }
+  Arduino: { icon: "arduino" },
+  C: { icon: "c" }
 };
 
 export default class Icon extends Component {
