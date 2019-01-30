@@ -70,6 +70,16 @@ export default class App extends Component {
         links:[{label:"Chrome Store",link:"https://chrome.google.com/webstore/detail/msdn-resize/bdcaffgeeafpmnpeogoipgfhklbppjlc"},{label:"Github",link:"https://github.com/mycomycul/MSDNFix"}],
         description: ["Google Chrome Extension that allows the user to reduce the the width of the MSDN side bar. If you've ever tried to use the MSDN Documentaiton on half your screen and found too much screen real estate was dedicated to the sidebar?"],
         features:["Adds Vertical divider between panes for quick resizing with just a click", "Automatically resizes with window resizing"]
+      },
+      {
+        title: "Temp Compare",
+        summary: "Arduino Program for displaying multiple thermometer values and alerting if one becomes greater than the other",
+        skills: [
+          "C", "Arduino", "Microcontrollers"
+        ],
+        links:[{label:"Github",link:"https://github.com/mycomycul/ArduinoTempCompare/"},{label:"TinkerCAD",link:"https://www.tinkercad.com/things/heJVZbuhrdK"},{label:"Wiring Diagram",link:"https://github.com/mycomycul/ArduinoTempCompare/blob/master/ArduinoTempCompare.png"}],
+        description: ["In the heat of the summer, I would check the thermometer outside all morning for when it started to be hotter outside and I needed to turn off the box fan and close the windows and blinds to preserve the cool indoor temperature and then repeat the process in reverse each evening.\n Wiring two thermometers to an arduino with this little program, I can see both temperatures in one spot and get a visual cue of a fading in and out light when the temperature has swapped so I don't miss it and spend more time in a baking apartment than necessary"],
+        features:["Displays values for two thermometers", "Switch between \u00B0F and \u00B0C", "Fades LCD LED in and out when temperature difference between either values swaps from negative to positive"]
       }
     ],
     modalProject: {}
