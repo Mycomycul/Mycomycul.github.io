@@ -17,7 +17,8 @@ const icons = {
   "SQL Server Spatial Data": { icon: "SQL" },
   "Google Maps": { icon: "google-maps" },
   GeoJSON: { icon: "geo-json" },
-  JSON: { icon: "json" }
+  JSON: { icon: "json" },
+  Arduino: { icon: "arduino" }
 };
 
 export default class Icon extends Component {
