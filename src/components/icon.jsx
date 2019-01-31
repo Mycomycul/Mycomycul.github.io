@@ -19,7 +19,8 @@ const icons = {
   GeoJSON: { icon: "geo-json" },
   JSON: { icon: "json" },
   Arduino: { icon: "arduino" },
-  C: { icon: "c" }
+  C: { icon: "c" },
+  Electronics: { icon: "MCU" }
 };
 
 export default class Icon extends Component {
