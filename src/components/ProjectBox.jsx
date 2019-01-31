@@ -8,7 +8,7 @@ class ProjectBox extends Component {
     const { id, project, onClick } = this.props || {};
     const sepskills = intersperse(this.props.project.skills, ", ");
     return (
-      <div className="col-4 col-sm-6">
+      <div className="col-lg-3 col-4 col-sm-6">
         <div className="project-box" onClick={() => onClick(id)}>
           <title className="griditem project-title">{project.title}</title>
           {/* <section className="project-links grid-item">Links</section> */}
