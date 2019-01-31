@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>StrunkTech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="./js/slidenav.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/main.css"
+    />
+    <!--Fints-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide"
+    />
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+    <!-- <script src="./js/slidenav.js"></script> -->
+  </head>
+  <body>
+    <!--NavBar Begin-->
+    <nav id="navbar">
+      <div class="navbuttons" id="navbuttons">
+        <span id="navlabel">Strunktech</span>
+        <a href="#about-panel" class="navslide">About</a>
+        <a href="#project-panel" class="navslide">Projects</a>
+        <a href="#contact-panel" class="navslide">Links</a>
+      </div>
+
+      <div id="navslide" class="sliderclick navslide">
+        <div id="slide-icon" class="centerx slide-initial"></div>
+      </div>
+    </nav>
+    <!--NavBar End-->
+
+    <!--Static Background for Higher Resolution-->
+    <div id="first-image-panel" class="image-panel">
+      <span id="first-image-label" class="image-label">Michael Strunk</span>
+    </div>
+
+    <section id="about-panel" class="content-panel container">
+      <div class="inner-panel-container row" id="about-panel-container">
+        <article class=" col-4" style="height: 40vh; text-align: center; position:relative;">
+       
+          <div class="box box-up box-5">
+            <img
+              src="./images/profile-pic.jpg"
+              alt="Michael's Profile Picture"
+              id="profile-pic"
+              class="profile-pic"
+            />
+          </div>
+          <div class="box box-up box-4"></div>
+
+          <div class="box box-up box-3"></div>
+          <div class="box box-up box-2"></div>
+
+          <div class="box box-up box-1"></div>
+     
+        </article style="clear:both;">
+        <article class=" col-8 ">
+            <div class="about-content-container ">
+               <div> I'm full-stack developer and instructor with a passion for all things programming.
+                With building hardware and programming microcontrollers, designing websites and contructing enterprise solutions, there's so much to do and so little time.
+            </div>
+            <div style="margin-top: 40px;">
+              <p>
+                      <h4>Languages:</h4> C#, JavaScript, HTML, CSS, SQL, Python<br>
+                      <h4>
+                          Web Development:
+                      </h4> ASP.NET MVC, Web Forms, Azure Hosting, React, Node.JS, JQuery, AJAX, RESTful APIs<br> 
+                      <h4>
+                        Mapping:
+                      </h4> Google Maps and ArcGIS API, SQL Server GeoSpatial Data, GeoJSON, GIS<br>
+                      <h4>
+                        Database:
+                      </h4> SQL Server,Entity Framework,T-SQL, SQLite, MongoDB<br>
+                      <h4>
+                        General:
+                      </h4>  Debugging, Git, Github, TFS(AzureDevOps), SCRUM, Research, Education, Employee Management, Ticket Management, Time Estimation, Adobe CC, Microelectronics, WebScraping, Arduino<br>
+                  </p>
+          </div>
+        </div>
+        </article>
+        <div class="row">
+      <article class="col-12 col-sm-12" id="about-skills"></article>
+
+    </article>
+  </div>
+      </div>
+    </section>
+    <div id="second-image-panel" class="image-panel">
+      <span id="second-image-label" class="image-label">Projects</span>
+    </div>
+    <section class="content-panel" id="project-panel">
+      <div class="inner-panel-container" id="project-panel-container"></div>
+    </section>
+    <div id="third-image-panel" class="image-panel">
+      <span id="third-image-label" class="image-label">Contact</span>
+    </div>
+
+    <section class="content-panel" id="contact-panel">
+      <div class="inner-panel-container" >
+        <div class="button-container">
+          <button class="contact-button">
+            <a href="http://www.linkedin.com/in/michael-strunk"
+              ><img
+                class="button-image"
+                src="images/icons/linkedin_logo.png"
+                alt="Michael's LinkedIn"
+            /></a>
+          </button>
+          <button class="contact-button" id="github">
+            <a href="http://www.github.com/mycomycul"
+              ><img
+                class="button-image"
+                src="images/icons/GitHub_Logo.png"
+                alt="Michael's Github"
+            /></a>
+          </button>
+          <button class="contact-button">
+            <a href="mailto:strunktech@gmail.com"
+              ><img
+                class="button-image"
+                src="images/icons/email.png"
+                alt="Email Michael"
+            /></a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      www.StrunkTech.com - 2019
+    </footer>
+  </body>
+</html>
