@@ -40,7 +40,7 @@ export default class App extends Component {
         links:[{label:"Strunktech.com",link:"www.strunktech.com"}],
         description:
           ["This website is currently being transtioned to a React Product when I can spare time"],
-          indev:"Animate Skills and About, Add projects"
+          indev:"Overflow on tooltips, Add projects"
       },
       {
         title: "My Trails",
@@ -75,7 +75,7 @@ export default class App extends Component {
         title: "Temp Compare",
         summary: "Arduino Program for displaying multiple thermometer values and alerting if one becomes greater than the other",
         skills: [
-          "C", "Arduino", "Microcontrollers"
+          "C", "Arduino", "Electronics"
         ],
         links:[{label:"Github",link:"https://github.com/mycomycul/ArduinoTempCompare/"},{label:"TinkerCAD",link:"https://www.tinkercad.com/things/heJVZbuhrdK"},{label:"Wiring Diagram",link:"https://github.com/mycomycul/ArduinoTempCompare/blob/master/ArduinoTempCompare.png"}],
         description: ["In the heat of the summer, I would check the thermometer outside all morning for when it started to be hotter outside and I needed to turn off the box fan and close the windows and blinds to preserve the cool indoor temperature and then repeat the process in reverse each evening.\n Wiring two thermometers to an arduino with this little program, I can see both temperatures in one spot and get a visual cue of a fading in and out light when the temperature has swapped so I don't miss it and spend more time in a baking apartment than necessary"],
