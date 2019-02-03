@@ -12,6 +12,15 @@ export default class App extends Component {
   state = {
     projectBox: [
       {
+        title: "Strunktech.com",
+        summary: "Project portfolio website built with React",
+        skills: ["React.js", "HTML", "CSS", "JavaScript"],
+        links:[{label:"Strunktech.com",link:"www.strunktech.com"}],
+        description:
+          ["This website is currently being transtioned to a React Product when I can spare time"],
+          indev:"Overflow on tooltips, Add projects"
+      },
+      {
         title: "PDF Writer",
         summary:
           "Print HTML form inputs on a pre-existing PDF document",
@@ -30,18 +39,10 @@ export default class App extends Component {
           }
         ],
         description:
-          ["This is a sample version of a larger project for digitally signing large PDF contracts. The company needed a solution that didn't require an API subscription or creating a new editable PDF. \n\n This sample is for registering your feline when moving to the moon. It recalculates your pet's weight for the moon, fills in the contract with the modfied content and also issues a registration certificate from the lunar authorities. \n The project uses ASP.NET MVC and the PDFSharp Library"],
+          ["Moving to the moon and need your cat registerd? This is a sample version of a larger project for digitally signing large PDF contracts. The company needed a solution that didn't require an API subscription or creating a new editable PDF. \n\n This sample is for registering your feline when moving to the moon. It recalculates your pet's weight for the moon, fills in the contract with the modfied content and also issues a registration certificate from the lunar authorities. \n The project uses ASP.NET MVC and the PDFSharp Library"],
           features:["Print to multiple page documents","Maintain original PDF formatting","Stores printing locations in JSON","Works with radiobuttons for PDF checkboxes","Handles font, font-size, and font-style","Email or direct download completed documents"]
       },
-      {
-        title: "Strunktech.com",
-        summary: "Project portfolio website built with React",
-        skills: ["React.js", "HTML", "CSS", "JavaScript"],
-        links:[{label:"Strunktech.com",link:"www.strunktech.com"}],
-        description:
-          ["This website is currently being transtioned to a React Product when I can spare time"],
-          indev:"Overflow on tooltips, Add projects"
-      },
+
       {
         title: "My Trails",
         summary: "Trail Conditions Scraper and Map Visualizer",
@@ -75,11 +76,31 @@ export default class App extends Component {
         title: "Temp Compare",
         summary: "Arduino Program for displaying multiple thermometer values and alerting if one becomes greater than the other",
         skills: [
-          "C", "Arduino", "Electronics"
+          "Arduino", "C", "Electronics"
         ],
         links:[{label:"Github",link:"https://github.com/mycomycul/ArduinoTempCompare/"},{label:"TinkerCAD",link:"https://www.tinkercad.com/things/heJVZbuhrdK"},{label:"Wiring Diagram",link:"https://github.com/mycomycul/ArduinoTempCompare/blob/master/ArduinoTempCompare.png"}],
         description: ["In the heat of the summer, I would check the thermometer outside all morning for when it started to be hotter outside and I needed to turn off the box fan and close the windows and blinds to preserve the cool indoor temperature and then repeat the process in reverse each evening.\n Wiring two thermometers to an arduino with this little program, I can see both temperatures in one spot and get a visual cue of a fading in and out light when the temperature has swapped so I don't miss it and spend more time in a baking apartment than necessary"],
         features:["Displays values for two thermometers", "Switch between \u00B0F and \u00B0C", "Fades LCD LED in and out when temperature difference between either values swaps from negative to positive"]
+      },
+      {
+        title: "Don't Die On Me",
+        summary: "Test soil moisture with a NeoPixel LED and an Arduino",
+        skills: [
+          "Arduino", "C",  "Electronics"
+        ],
+        links:[{label:"Github",link:"https://github.com/mycomycul/Neopixel-Moisture-Indicator"},{label:"TinkerCAD",link:"https://www.tinkercad.com/things/1YMQJSG3po6"},{label:"Wiring Diagram",link:"https://github.com/mycomycul/Neopixel-Moisture-Indicator/blob/master/snapshot/moisture-sensor.png"}],
+        description: ["Having house-sitters and don't want them to over water. Using an analog moisture sensor, a NeoPixel LED, an arduino, and some basic parts you can make your own no worries, moisture gauge"],
+        features:["3 sensor ranges: Red-Dry, Green-Moist, Blue-Wet", "Adjustable moisture thresholds","Simple Construction"]
+      },
+      {
+        title:"TripMapper",
+        summary:"Create record of your travels with a google map that follows along as you read",
+        skills:["JavaScript","HTML","CSS","Google Maps"],
+        description:["Type a descripton of a location or a summary of your experience and connect it to map coordinates with a click of a button.  For each new location, add a new section of text and new coordinates. When you're done just click export to create embeddable code to add to your website"],
+        links:[{label:"Github",link:"https://github.com/mycomycul/TripMapper"}],
+        indev:"Exporting embeddable content, UI, Clean directory",
+        features:["Drag and Drop to reorganize sections"]
+
       }
     ],
     modalProject: {}
