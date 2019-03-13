@@ -57,7 +57,7 @@ export default class App extends Component {
         description:[ "Scrapes trail conditons from the Olympic National Park website so that they can viewed alongside a map of trail conditions.",
       "The current website is a static website with no long term records or visual UX.  MyTrails allows you to look at a history of conditions and the location of selected trails on a map"],
       features:["Imports GeoJSON data into SQL Server and returns it back as JSON", "Web Scraping of NPS Trails Conditions","Cleans content of excess HTML markup", "Automatic and Manual pairing of trail conditions with map data","Interface for viewing trail names, a long-term record of conditions and map data"],
-      indev : "Build react interface, Oraganize pages"
+      indev : "Build react interface, Oraganize pages, Create WebAPI for data access"
 
       },
 
@@ -94,7 +94,7 @@ export default class App extends Component {
       },
       {
         title:"TripMapper",
-        summary:"Create record of your travels with a google map that follows along as you read",
+        summary:"Create a record of your travels with a google map that follows along as you read",
         skills:["JavaScript","HTML","CSS","Google Maps"],
         description:["Type a descripton of a location or a summary of your experience and connect it to map coordinates with a click of a button.  For each new location, add a new section of text and new coordinates. When you're done just click export to create embeddable code to add to your website"],
         links:[{label:"Github",link:"https://github.com/mycomycul/TripMapper"}],
