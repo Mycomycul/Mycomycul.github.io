@@ -430,4 +430,9 @@ footer{
   text-align:center;
   font-family: var(--content-text);
 }
+@media only screen and (max-width:600px ){
+#project-modal{
+padding-top: 0px;
+}
+}
 
