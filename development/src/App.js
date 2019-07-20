@@ -15,10 +15,10 @@ export default class App extends Component {
         title: "Strunktech.com",
         summary: "Project portfolio website built with React",
         skills: ["React.js", "HTML", "CSS", "JavaScript"],
-        links:[{label:"Strunktech.com",link:"www.strunktech.com"}],
+        links:[{label:"Strunktech.com",link:"www.strunktech.com"},{label:"Github",link: "https://github.com/mycomycul/mycomycul.github.io"}],
         description:
           ["This website is currently being transtioned to a React Product when I can spare time"],
-          indev:"Overflow on tooltips, Add projects"
+          indev:"Overflow on tooltips, Mobile modals, More projects"
       },
       {
         title: "PDF Writer",
@@ -39,7 +39,7 @@ export default class App extends Component {
           }
         ],
         description:
-          ["Moving to the moon and need your cat registerd? This is a sample version of a larger project for digitally signing large PDF contracts. The company needed a solution that didn't require an API subscription or creating a new editable PDF. \n\n This sample is for registering your feline when moving to the moon. It recalculates your pet's weight for the moon, fills in the contract with the modfied content and also issues a registration certificate from the lunar authorities. \n The project uses ASP.NET MVC and the PDFSharp Library"],
+          ["Moving to the moon and need your cat registerd? This is a sample version of a larger project for digitally signing large PDF contracts. The company needed a solution that didn't require an API subscription or creating a new editable PDF. \n\n This sample is for registering your feline when moving to the moon. It recalculates your pet's weight for the moon, fills in the contract with the modfied content and issues a registration certificate from the lunar authorities. \n The project uses ASP.NET MVC and the PDFSharp Library"],
           features:["Print to multiple page documents","Maintain original PDF formatting","Stores printing locations in JSON","Works with radiobuttons for PDF checkboxes","Handles font, font-size, and font-style","Email or direct download completed documents"]
       },
 
@@ -55,9 +55,9 @@ export default class App extends Component {
           "Google Maps"
         ],
         description:[ "Scrapes trail conditons from the Olympic National Park website so that they can viewed alongside a map of trail conditions.",
-      "The current website is a static website with no long term records or visual UX.  MyTrails allows you to look at a history of conditions and the location of selected trails on a map"],
-      features:["Imports GeoJSON data into SQL Server and returns it back as JSON", "Web Scraping of NPS Trails Conditions","Cleans content of excess HTML markup", "Automatic and Manual pairing of trail conditions with map data","Interface for viewing trail names, a long-term record of conditions and map data"],
-      indev : "Build react interface, Oraganize pages"
+      "The current official website is a static website with no long term records or visual UX.  MyTrails allows you to look at a history of conditions and the location of selected trails on a map"],
+      features:["Imports GeoJSON data into SQL Server and returns it back as JSON", "Scrapes NPS Trails Conditions","Cleans content of excess HTML markup", "Automatic and Manual pairing of trail conditions with map data","Interface for viewing trail names, a long-term record of conditions and map data"],
+      indev : "Build Angular interface, Oraganize pages"
 
       },
 
@@ -69,8 +69,8 @@ export default class App extends Component {
         ],
         image:"MSDNResize.png",
         links:[{label:"Chrome Store",link:"https://chrome.google.com/webstore/detail/msdn-resize/bdcaffgeeafpmnpeogoipgfhklbppjlc"},{label:"Github",link:"https://github.com/mycomycul/MSDNFix"}],
-        description: ["Google Chrome Extension that allows the user to reduce the the width of the MSDN side bar. If you've ever tried to use the MSDN Documentaiton on half your screen and found too much screen real estate was dedicated to the sidebar?"],
-        features:["Adds Vertical divider between panes for quick resizing with just a click", "Automatically resizes with window resizing"]
+        description: ["Google Chrome Extension that allows the user to reduce the the width of the MSDN side bar. If you've ever tried to use the MSDN Documentaiton on half your screen and found too much screen real estate was dedicated to the sidebar, this extension is for you?"],
+        features:["Adds a vertical divider between panes for quick resizing with just a click", "Automatically adapts to window resizing"]
       },
       {
         title: "Temp Compare",
@@ -79,7 +79,7 @@ export default class App extends Component {
           "Arduino", "C", "Electronics"
         ],
         links:[{label:"Github",link:"https://github.com/mycomycul/ArduinoTempCompare/"},{label:"TinkerCAD",link:"https://www.tinkercad.com/things/heJVZbuhrdK"},{label:"Wiring Diagram",link:"https://github.com/mycomycul/ArduinoTempCompare/blob/master/ArduinoTempCompare.png"}],
-        description: ["In the heat of the summer, I would check the thermometer outside all morning for when it started to be hotter outside and I needed to turn off the box fan and close the windows and blinds to preserve the cool indoor temperature and then repeat the process in reverse each evening.\n Wiring two thermometers to an arduino with this little program, I can see both temperatures in one spot and get a visual cue of a fading in and out light when the temperature has swapped so I don't miss it and spend more time in a baking apartment than necessary"],
+        description: ["In the heat of the summer, I would check the thermometer outside all morning for when it started to be hotter outside and I needed to turn off the box fan and close the windows and blinds to preserve the cool indoor temperature. I'd then repeat the process in reverse each evening.\n Wiring two thermometers to an arduino with this little program, I can see both temperatures in one spot and am alerted by the LCD light fading in and out when the temperature has swapped so I don't miss it and spend more time in a baking apartment than necessary."],
         features:["Displays values for two thermometers", "Switch between \u00B0F and \u00B0C", "Fades LCD LED in and out when temperature difference between either values swaps from negative to positive"]
       },
       {
@@ -89,7 +89,7 @@ export default class App extends Component {
           "Arduino", "C",  "Electronics"
         ],
         links:[{label:"Github",link:"https://github.com/mycomycul/Neopixel-Moisture-Indicator"},{label:"TinkerCAD",link:"https://www.tinkercad.com/things/1YMQJSG3po6"},{label:"Wiring Diagram",link:"https://github.com/mycomycul/Neopixel-Moisture-Indicator/blob/master/snapshot/moisture-sensor.png"}],
-        description: ["Having house-sitters and don't want them to over water. Using an analog moisture sensor, a NeoPixel LED, an arduino, and some basic parts you can make your own no worries, moisture gauge"],
+        description: ["Having house-sitters and don't want them to over water. Using an analog moisture sensor, a NeoPixel LED, an arduino, and some basic parts you can make your own worry free moisture gauge"],
         features:["3 sensor ranges: Red-Dry, Green-Moist, Blue-Wet", "Adjustable moisture thresholds","Simple Construction"]
       },
       {
@@ -97,9 +97,19 @@ export default class App extends Component {
         summary:"Create record of your travels with a google map that follows along as you read",
         skills:["JavaScript","HTML","CSS","Google Maps"],
         description:["Type a descripton of a location or a summary of your experience and connect it to map coordinates with a click of a button.  For each new location, add a new section of text and new coordinates. When you're done just click export to create embeddable code to add to your website"],
-        links:[{label:"Github",link:"https://github.com/mycomycul/TripMapper"}],
+        links:[{label:"Github",link:"https://github.com/mycomycul/TripMapper"},{label:"TripMapper",link:"http://www.strunktech.com/TripMapper"}],
         indev:"Exporting embeddable content, UI, Clean directory",
         features:["Drag and Drop to reorganize sections"]
+
+      },
+      {
+        title:"JS SideScroller Demo",
+        summary:"Simple Side Scroller based on W3 Canvas tutorial",
+        skills:["JavaScript","HTML","CSS"],
+        description:["Use the arrow keys to avoid approaching walls. The longer you play, the faster it gets."],
+        links:[{label:"Github",link:"https://github.com/mycomycul/js-canvas-sidescroller"},{label:"JS Sidescroller",link:"http://www.strunktech.com/js-canvas-sidescroller"}],
+        indev:"Storing scores in cookies, Artisitc obstacles and gamepiece"
+        // features:[""]
 
       }
     ],
