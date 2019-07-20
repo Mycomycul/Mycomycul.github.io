@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
   });
 });
-//Method Author Unknown
+
 var getHeight = function(el) {
     var el_style = window.getComputedStyle(el),
       el_display = el_style.display,
